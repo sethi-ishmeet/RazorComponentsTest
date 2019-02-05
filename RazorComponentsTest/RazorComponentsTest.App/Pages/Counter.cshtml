@@ -1,0 +1,16 @@
+﻿@page "/counter"
+@inherits CounterComponent
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" onclick="@IncrementCount">Click me</button>
+
+<h4>To Everybody</h4>
+<form class="form-inline">
+    <div class="input-append">
+        <input type="text" id="message-text" placeholder="Type a message" bind=@_toEverybody />
+        <input type="button" id="broadcast" class="btn" value="Broadcast" onclick=@Broadcast />
+        <input type="button" id="broadcast-exceptme" class="btn" value="Broadcast (Others)" onclick=@SendToOthers />
+    </div>
+</form>
